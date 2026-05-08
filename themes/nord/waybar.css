@@ -1,0 +1,275 @@
+/* =========================================================
+   Nord Palette
+   ========================================================= */
+
+@define-color bg rgba(46, 52, 64, 0.85);
+
+@define-color text #ECEFF4;
+
+@define-color nord0 #2E3440;
+@define-color nord1 #3B4252;
+@define-color nord2 #434C5E;
+@define-color nord3 #4C566A;
+
+@define-color nord4 #D8DEE9;
+@define-color nord5 #E5E9F0;
+@define-color nord6 #ECEFF4;
+
+@define-color frost1 #8FBCBB;
+@define-color frost2 #88C0D0;
+@define-color frost3 #81A1C1;
+@define-color frost4 #5E81AC;
+
+@define-color red #BF616A;
+@define-color orange #D08770;
+@define-color yellow #EBCB8B;
+@define-color green #A3BE8C;
+@define-color purple #B48EAD;
+
+@define-color surface rgba(59, 66, 82, 0.85);
+@define-color surface-hover rgba(76, 86, 106, 0.95);
+
+@define-color border rgba(236,239,244,0.12);
+
+@define-color red-border rgba(191,97,106,0.20);
+@define-color yellow-border rgba(235,203,139,0.20);
+@define-color frost1-border rgba(143,188,187,0.20);
+@define-color frost2-border rgba(136,192,208,0.20);
+@define-color orange-border rgba(208,135,112,0.20);
+@define-color purple-border rgba(180,142,173,0.20);
+@define-color green-border rgba(163,190,140,0.20);
+@define-color frost3-border rgba(129,161,193,0.20);
+
+/* =========================================================
+   Global
+   ========================================================= */
+
+window#waybar {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+* {
+    border: none;
+    min-height: 0;
+
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: transparent;
+}
+
+/* =========================================================
+   Shutdown
+   ========================================================= */
+
+#custom-shutdown {
+    background: @bg;
+    color: @red;
+
+    border: 1px solid @red-border;
+    border-radius: 999px;
+
+    margin: 6px 4px;
+
+    padding: 0 14px;
+    padding-left: 12px;
+}
+
+/* =========================================================
+   Clock
+   ========================================================= */
+
+#clock {
+    background: @bg;
+    color: @text;
+
+    border: 1px solid @border;
+    border-radius: 999px;
+
+    margin: 6px 4px;
+
+    padding: 0 14px;
+}
+
+/* =========================================================
+   Weather
+   ========================================================= */
+
+#custom-weather {
+    background: @bg;
+    color: @yellow;
+
+    border: 1px solid @yellow-border;
+    border-radius: 999px;
+
+    margin: 6px 4px;
+
+    padding: 0 14px;
+}
+
+/* =========================================================
+   Workspaces
+   ========================================================= */
+
+#workspaces {
+    background: @bg;
+
+    border: 1px solid @border;
+    border-radius: 999px;
+
+    margin: 6px 4px;
+
+    padding: 0 4px;
+}
+
+#workspaces button {
+    color: @text;
+
+    border-radius: 999px;
+    padding: 0 8px;
+}
+
+#workspaces button.active {
+    background: rgba(129,161,193,0.25);
+    color: @frost3;
+}
+
+/* =========================================================
+   Network
+   ========================================================= */
+
+#network {
+    background: @bg;
+    color: @frost1;
+
+    border: 1px solid @frost1-border;
+    border-radius: 999px;
+
+    margin: 6px 4px;
+
+    padding: 0 14px;
+}
+
+/* =========================================================
+   Bluetooth
+   ========================================================= */
+
+#bluetooth {
+    background: @bg;
+    color: @frost2;
+
+    border: 1px solid @frost2-border;
+    border-radius: 999px;
+
+    margin: 6px 4px;
+
+    padding: 0 14px;
+    padding-left: 12px;
+}
+
+/* =========================================================
+   Audio
+   ========================================================= */
+
+#pulseaudio {
+    background: @bg;
+    color: @orange;
+
+    border: 1px solid @orange-border;
+    border-radius: 999px;
+
+    margin: 6px 4px;
+
+    padding: 0 14px;
+}
+
+/* =========================================================
+   CPU
+   ========================================================= */
+
+#cpu {
+    background: @bg;
+    color: @red;
+
+    border: 1px solid @red-border;
+    border-radius: 999px;
+
+    margin: 6px 4px;
+
+    padding: 0 14px;
+}
+
+/* =========================================================
+   Memory
+   ========================================================= */
+
+#memory {
+    background: @bg;
+    color: @purple;
+
+    border: 1px solid @purple-border;
+    border-radius: 999px;
+
+    margin: 6px 4px;
+
+    padding: 0 14px;
+}
+
+/* =========================================================
+   Battery
+   ========================================================= */
+
+#custom-battery {
+    background: @bg;
+    color: @green;
+
+    border: 1px solid @green-border;
+    border-radius: 999px;
+
+    margin: 6px 4px;
+
+    padding: 0 14px;
+}
+
+/* =========================================================
+   Power Profiles
+   ========================================================= */
+
+#power-profiles-daemon {
+    background: @bg;
+    color: @text;
+
+    border: 1px solid @border;
+    border-radius: 999px;
+
+    margin: 6px 4px;
+
+    padding-left: 10px;
+    padding-right: 14px;
+}
+
+/* =========================================================
+   Hover
+   ========================================================= */
+
+#custom-shutdown:hover,
+#clock:hover,
+#custom-weather:hover,
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#cpu:hover,
+#memory:hover,
+#custom-battery:hover,
+#power-profiles-daemon:hover,
+#workspaces button:hover {
+    background: @surface-hover;
+}

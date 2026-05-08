@@ -1,0 +1,94 @@
+configuration {
+    show-icons: false;
+}
+
+* {
+    bg:             rgba(30, 30, 46, 0.92);
+    bg-alt:         rgba(49, 50, 68, 0.92);
+
+    fg:             #CDD6F4;
+
+    accent:         #89B4FA;
+
+    border-color:   #89B4FA;
+
+    selected:       #313244;
+
+    border-radius:  16px;
+
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+window {
+    transparency: "real";
+    location: center;
+
+    anchor: center;
+
+    fullscreen: false;
+
+    width: 350px;
+
+    border: 2px;
+    border-color: @border-color;
+
+    border-radius: @border-radius;
+
+    background-color: @bg;
+
+    padding: 18px;
+}
+
+mainbox {
+    background-color: transparent;
+
+    spacing: 14px;
+
+    children: [ "inputbar", "listview" ];
+}
+
+inputbar {
+    enabled: false;
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @accent;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+listview {
+    background-color: transparent;
+
+    lines: 6;
+    columns: 1;
+
+    fixed-height: false;
+
+    spacing: 8px;
+
+    scrollbar: false;
+}
+
+element {
+    background-color: transparent;
+
+    text-color: @fg;
+
+    border-radius: 12px;
+
+    padding: 10px;
+}
+
+element selected {
+    background-color: @selected;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}

@@ -1,0 +1,135 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mode": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 32,
+    "margin-bottom": 0,
+    "spacing": 0,
+    "modules-left": [
+        "custom/shutdown",
+        "clock",
+        "custom/weather"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "network",
+        "bluetooth",
+        "pulseaudio",
+        "cpu",
+        "memory",
+        "custom/battery",
+        "power-profiles-daemon"
+    ],
+    "custom/shutdown": {
+    "format": "󰐥",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/shutdown_menu.sh"
+    },
+    "clock": {
+        "timezone": "America/Bogota",
+        "tooltip": true,
+        "format": "{:%H:%M %a %b %d}"
+    },
+    "custom/weather": {
+    "exec": "~/.config/waybar/scripts/get_weather.sh",
+    "return-type": "json",
+    "interval": 1800,
+    "tooltip": true
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "일",
+            "2": "이",
+            "3": "삼",
+            "4": "사",
+            "5": "오"
+        },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+    "network": {
+        "interval": 5,
+        "format-wifi": "{icon}   {essid}",
+        "format-icons": [
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+        ],
+
+        "format-ethernet": "󰈀   Ethernet",
+        "format-disconnected": "󰤮   Offline",
+
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ipaddr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "kitty nmtui"
+    },
+    "bluetooth": {
+        "format": "",
+        "format-connected": "   {device_alias}",
+        "format-connected-battery": "   {device_alias} {device_battery_percentage}%",
+
+        "format-disabled": "",
+        "format-off": "",
+
+        "tooltip-format": "{controller_alias}",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "on-click": "kitty bluetuith"
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰖁",
+
+        "format-icons": {
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
+        },
+
+        "tooltip": false,
+        "on-click": "pavucontrol"
+    },
+    "cpu": {
+        "format": "󰍛  {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "󰘚  {}%",
+        "tooltip": false
+    },
+    "custom/battery": {
+    "exec": "~/.config/waybar/scripts/battery.sh",
+    "return-type": "json",
+    "interval": 30
+    },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Profile: {profile}",
+
+        "format-icons": {
+            "default": "󰾅",
+            "performance": "<span color='#ff5555'>󰓅</span>",
+            "balanced": "<span color='#ffffff'>󰾅</span>",
+            "power-saver": "<span color='#a6e3a1'>󰾆</span>"
+        }
+    }
+}
