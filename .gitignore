@@ -7,8 +7,7 @@ cachyos/
 celluloid/
 chromium/
 Code/*
-!Code/User/
-!Code/User/**
+!Code/User/settings.json
 Code-back/
 dconf/
 discord/
