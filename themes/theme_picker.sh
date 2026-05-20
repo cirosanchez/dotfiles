@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-theme=$(printf "mocha\nnord" | wofi \
+theme=$(printf "mocha\nnord\ngruvbox\nnothingos" | wofi \
     --dmenu \
     --no-search \
     --prompt "Theme" \

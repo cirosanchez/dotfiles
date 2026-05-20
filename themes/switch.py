@@ -40,10 +40,6 @@ for file in FILES:
 # Apply VSCode theme
 # --------------------------------------------------
 
-# --------------------------------------------------
-# Apply VSCode theme
-# --------------------------------------------------
-
 if theme == "mocha":
     subprocess.run(
         r"""sed -i 's/"workbench.colorTheme":.*/"workbench.colorTheme": "Catppuccin Mocha",/' /home/ciro/.config/Code/User/settings.json""",
@@ -55,6 +51,19 @@ elif theme == "nord":
         r"""sed -i 's/"workbench.colorTheme":.*/"workbench.colorTheme": "Nord Dark",/' /home/ciro/.config/Code/User/settings.json""",
         shell=True
     )
+
+elif theme == "gruvbox":
+    subprocess.run(
+        r"""sed -i 's/"workbench.colorTheme":.*/"workbench.colorTheme": "Gruvbox Dark",/' /home/ciro/.config/Code/User/settings.json""",
+        shell=True
+    )
+
+elif theme == "nothingos":
+    subprocess.run(
+        r"""sed -i 's/"workbench.colorTheme":.*/"workbench.colorTheme": "Nothing OS Dark",/' /home/ciro/.config/Code/User/settings.json""",
+        shell=True
+    )
+
 
 # --------------------------------------------------
 # Restore wallpaper for this theme
@@ -124,7 +133,13 @@ if obsidian.exists():
         settings["cssTheme"] = "Catppuccin"
 
     elif theme == "nord":
-        settings["cssTheme"] = "Obsidian rNord"
+        settings["cssTheme"] = "Obsidian Nord"
+    
+    elif theme == "gruvbox":
+        settings["cssTheme"] = "Obsidian gruvbox"
+
+    elif theme == "nothingos":
+        settings["cssTheme"] = "Red-Shadow"
 
     with open(obsidian, "w") as f:
         json.dump(settings, f, indent=4)
@@ -136,5 +151,22 @@ if obsidian.exists():
 
 subprocess.run(
     "swaync-client --reload-css",
+    shell=True
+)
+
+# --------------------------------------------------
+# Apply GTK theme
+# --------------------------------------------------
+
+gtk_themes = {
+    "mocha": "catppuccin-mocha-sky-standard+default",
+    "nord": "Nordic",
+    "gruvbox": "gruvbox-dark-gtk",
+    "nothingos": "Graphite-red-Dark"
+}
+
+
+subprocess.run(
+    f"gsettings set org.gnome.desktop.interface gtk-theme '{gtk_themes[theme]}'",
     shell=True
 )

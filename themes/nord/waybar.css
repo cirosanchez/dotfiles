@@ -67,19 +67,35 @@ window#waybar {
 }
 
 /* =========================================================
+   Shared Pills
+   ========================================================= */
+
+#custom-shutdown,
+#clock,
+#custom-weather,
+#network,
+#bluetooth,
+#pulseaudio,
+#cpu,
+#memory,
+#custom-battery,
+#power-profiles-daemon,
+#mpris {
+    background: @bg;
+
+    border-radius: 999px;
+
+    margin: 6px 4px;
+    padding: 0 14px;
+}
+
+/* =========================================================
    Shutdown
    ========================================================= */
 
 #custom-shutdown {
-    background: @bg;
     color: @red;
-
     border: 1px solid @red-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-
-    padding: 0 14px;
     padding-left: 12px;
 }
 
@@ -88,15 +104,8 @@ window#waybar {
    ========================================================= */
 
 #clock {
-    background: @bg;
     color: @text;
-
     border: 1px solid @border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-
-    padding: 0 14px;
 }
 
 /* =========================================================
@@ -104,15 +113,8 @@ window#waybar {
    ========================================================= */
 
 #custom-weather {
-    background: @bg;
     color: @yellow;
-
     border: 1px solid @yellow-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-
-    padding: 0 14px;
 }
 
 /* =========================================================
@@ -126,7 +128,6 @@ window#waybar {
     border-radius: 999px;
 
     margin: 6px 4px;
-
     padding: 0 4px;
 }
 
@@ -147,15 +148,8 @@ window#waybar {
    ========================================================= */
 
 #network {
-    background: @bg;
     color: @frost1;
-
     border: 1px solid @frost1-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-
-    padding: 0 14px;
 }
 
 /* =========================================================
@@ -163,15 +157,8 @@ window#waybar {
    ========================================================= */
 
 #bluetooth {
-    background: @bg;
     color: @frost2;
-
     border: 1px solid @frost2-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-
-    padding: 0 14px;
     padding-left: 12px;
 }
 
@@ -180,15 +167,8 @@ window#waybar {
    ========================================================= */
 
 #pulseaudio {
-    background: @bg;
     color: @orange;
-
     border: 1px solid @orange-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-
-    padding: 0 14px;
 }
 
 /* =========================================================
@@ -196,15 +176,8 @@ window#waybar {
    ========================================================= */
 
 #cpu {
-    background: @bg;
     color: @red;
-
     border: 1px solid @red-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-
-    padding: 0 14px;
 }
 
 /* =========================================================
@@ -212,15 +185,8 @@ window#waybar {
    ========================================================= */
 
 #memory {
-    background: @bg;
     color: @purple;
-
     border: 1px solid @purple-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-
-    padding: 0 14px;
 }
 
 /* =========================================================
@@ -228,15 +194,8 @@ window#waybar {
    ========================================================= */
 
 #custom-battery {
-    background: @bg;
     color: @green;
-
     border: 1px solid @green-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-
-    padding: 0 14px;
 }
 
 /* =========================================================
@@ -244,16 +203,21 @@ window#waybar {
    ========================================================= */
 
 #power-profiles-daemon {
-    background: @bg;
     color: @text;
 
     border: 1px solid @border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
 
     padding-left: 10px;
     padding-right: 14px;
+}
+
+/* =========================================================
+   Media
+   ========================================================= */
+
+#mpris {
+    color: @frost3;
+    border: 1px solid @frost3-border;
 }
 
 /* =========================================================
@@ -270,6 +234,8 @@ window#waybar {
 #memory:hover,
 #custom-battery:hover,
 #power-profiles-daemon:hover,
+#mpris:hover,
 #workspaces button:hover {
     background: @surface-hover;
 }
+

@@ -1,0 +1,10 @@
+storage:
+  data_dir: "/home/ciro/.config/Postman/dataset-engine/data"
+interfaces:
+  http:
+    enabled: true
+    address: "127.0.0.1:41871"
+  websocket:
+    enabled: false
+  ipc:
+    enabled: true

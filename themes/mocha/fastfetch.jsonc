@@ -5,7 +5,7 @@
     "type": "file",
     "source": "~/.config/fastfetch/dog.txt",
     "color": {
-      "1": "bright_yellow"
+      "1": "bright_cyan"
     }
   },
 

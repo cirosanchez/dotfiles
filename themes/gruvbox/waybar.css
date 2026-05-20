@@ -1,0 +1,235 @@
+/* =========================================================
+   Gruvbox Palette
+   ========================================================= */
+
+@define-color bg rgba(40, 40, 40, 0.85);
+
+@define-color text #ebdbb2;
+
+@define-color rosewater #ebdbb2;
+@define-color flamingo #d5c4a1;
+@define-color pink #d3869b;
+@define-color mauve #b16286;
+@define-color red #fb4934;
+@define-color maroon #cc241d;
+@define-color peach #fe8019;
+@define-color yellow #fabd2f;
+@define-color green #b8bb26;
+@define-color teal #8ec07c;
+@define-color sky #83a598;
+@define-color sapphire #458588;
+@define-color blue #83a598;
+@define-color lavender #928374;
+
+@define-color surface rgba(60, 56, 54, 0.85);
+@define-color surface-hover rgba(80, 73, 69, 0.95);
+
+@define-color border rgba(235,219,178,0.12);
+
+@define-color red-border rgba(251,73,52,0.20);
+@define-color yellow-border rgba(250,189,47,0.20);
+@define-color sky-border rgba(131,165,152,0.20);
+@define-color sapphire-border rgba(69,133,136,0.20);
+@define-color peach-border rgba(254,128,25,0.20);
+@define-color mauve-border rgba(177,98,134,0.20);
+@define-color green-border rgba(184,187,38,0.20);
+@define-color blue-border rgba(131,165,152,0.20);
+
+/* =========================================================
+   Global
+   ========================================================= */
+
+window#waybar {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+* {
+    border: none;
+    min-height: 0;
+
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: transparent;
+}
+
+/* =========================================================
+   Shared Pills
+   ========================================================= */
+
+#custom-shutdown,
+#clock,
+#custom-weather,
+#network,
+#bluetooth,
+#pulseaudio,
+#cpu,
+#memory,
+#custom-battery,
+#power-profiles-daemon,
+#mpris {
+    background: @bg;
+
+    border-radius: 999px;
+
+    margin: 6px 4px;
+    padding: 0 14px;
+}
+
+/* =========================================================
+   Shutdown
+   ========================================================= */
+
+#custom-shutdown {
+    color: @red;
+    border: 1px solid @red-border;
+    padding-left: 12px;
+}
+
+/* =========================================================
+   Clock
+   ========================================================= */
+
+#clock {
+    color: @text;
+    border: 1px solid @border;
+}
+
+/* =========================================================
+   Weather
+   ========================================================= */
+
+#custom-weather {
+    color: @yellow;
+    border: 1px solid @yellow-border;
+}
+
+/* =========================================================
+   Workspaces
+   ========================================================= */
+
+#workspaces {
+    background: @bg;
+
+    border: 1px solid @border;
+    border-radius: 999px;
+
+    margin: 6px 4px;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    color: @text;
+
+    border-radius: 999px;
+    padding: 0 8px;
+}
+
+#workspaces button.active {
+    background: rgba(131,165,152,0.25);
+    color: @blue;
+}
+
+/* =========================================================
+   Network
+   ========================================================= */
+
+#network {
+    color: @sky;
+    border: 1px solid @sky-border;
+}
+
+/* =========================================================
+   Bluetooth
+   ========================================================= */
+
+#bluetooth {
+    color: @sapphire;
+    border: 1px solid @sapphire-border;
+    padding-left: 12px;
+}
+
+/* =========================================================
+   Audio
+   ========================================================= */
+
+#pulseaudio {
+    color: @peach;
+    border: 1px solid @peach-border;
+}
+
+/* =========================================================
+   CPU
+   ========================================================= */
+
+#cpu {
+    color: @red;
+    border: 1px solid @red-border;
+}
+
+/* =========================================================
+   Memory
+   ========================================================= */
+
+#memory {
+    color: @mauve;
+    border: 1px solid @mauve-border;
+}
+
+/* =========================================================
+   Battery
+   ========================================================= */
+
+#custom-battery {
+    color: @green;
+    border: 1px solid @green-border;
+}
+
+/* =========================================================
+   Power Profiles
+   ========================================================= */
+
+#power-profiles-daemon {
+    color: @text;
+
+    border: 1px solid @border;
+
+    padding-left: 10px;
+    padding-right: 14px;
+}
+
+/* =========================================================
+   Media
+   ========================================================= */
+
+#mpris {
+    color: @green;
+    border: 1px solid @green-border;
+}
+
+/* =========================================================
+   Hover
+   ========================================================= */
+
+#custom-shutdown:hover,
+#clock:hover,
+#custom-weather:hover,
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#cpu:hover,
+#memory:hover,
+#custom-battery:hover,
+#power-profiles-daemon:hover,
+#mpris:hover,
+#workspaces button:hover {
+    background: @surface-hover;
+}
+

@@ -1,0 +1,135 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "type": "file",
+    "source": "~/.config/fastfetch/dog.txt",
+    "color": {
+      "1": "#8ec07c"
+    }
+  },
+
+  "display": {
+    "separator": " "
+  },
+
+  "modules": [
+    {
+      "type": "custom",
+      "format": "\u001b[38;5;108m      ╭─ SYSTEM ───────────────────────────────╮"
+    },
+
+    {
+      "type": "os",
+      "key": "      OS",
+      "keyColor": "#8ec07c"
+    },
+
+    {
+      "type": "kernel",
+      "key": "      Kernel",
+      "keyColor": "#8ec07c"
+    },
+
+    {
+      "type": "host",
+      "key": "      Host",
+      "keyColor": "#8ec07c"
+    },
+
+    {
+      "type": "uptime",
+      "key": "      Uptime",
+      "keyColor": "#8ec07c"
+    },
+
+    {
+      "type": "custom",
+      "format": "\u001b[38;5;108m      ╰────────────────────────────────────────╯"
+    },
+
+    {
+      "type": "custom",
+      "format": ""
+    },
+
+    {
+      "type": "custom",
+      "format": "\u001b[38;5;167m      ╭─ HARDWARE ─────────────────────────────╮"
+    },
+
+    {
+      "type": "cpu",
+      "key": "      CPU",
+      "keyColor": "red"
+    },
+
+    {
+      "type": "gpu",
+      "key": "      GPU",
+      "keyColor": "blue"
+    },
+
+    {
+      "type": "memory",
+      "key": "      Memory",
+      "keyColor": "magenta"
+    },
+
+    {
+      "type": "disk",
+      "key": "      Disk",
+      "keyColor": "green"
+    },
+
+    {
+      "type": "custom",
+      "format": "\u001b[38;5;167m      ╰────────────────────────────────────────╯"
+    },
+
+    {
+      "type": "custom",
+      "format": ""
+    },
+
+    {
+      "type": "custom",
+      "format": "\u001b[38;5;214m      ╭─ MISC ─────────────────────────────────╮"
+    },
+
+    {
+      "type": "shell",
+      "key": "      Shell",
+      "keyColor": "yellow"
+    },
+
+    {
+      "type": "terminal",
+      "key": "      Terminal",
+      "keyColor": "yellow"
+    },
+
+    {
+      "type": "wm",
+      "key": "      WM",
+      "keyColor": "yellow"
+    },
+
+    {
+      "type": "packages",
+      "key": "      Packages",
+      "keyColor": "yellow"
+    },
+
+    {
+      "type": "locale",
+      "key": "      Locale",
+      "keyColor": "yellow"
+    },
+
+    {
+      "type": "custom",
+      "format": "\u001b[38;5;214m      ╰────────────────────────────────────────╯"
+    }
+  ]
+}

@@ -1,7 +1,9 @@
 {
     "current_theme": "nord",
     "wallpapers": {
-        "mocha": "/home/ciro/Pictures/mocha/1.png",
-        "nord": "/home/ciro/Pictures/nord/4.png"
+        "mocha": "/home/ciro/Pictures/mocha/3.jpg",
+        "nord": "/home/ciro/Pictures/nord/2.png",
+        "gruvbox": "/home/ciro/Pictures/gruvbox/8.png",
+        "nothingos": "/home/ciro/Pictures/nothingos/1.png"
     }
 }

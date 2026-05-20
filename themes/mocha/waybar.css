@@ -51,8 +51,8 @@ window#waybar {
 
     font-family: "JetBrainsMono Nerd Font";
     font-size: 14px;
-    transition: all 0.2s ease;
 
+    transition: all 0.2s ease;
 }
 
 .modules-left,
@@ -62,18 +62,35 @@ window#waybar {
 }
 
 /* =========================================================
-   Shutdown
+   Shared Pills
    ========================================================= */
 
-#custom-shutdown {
+#custom-shutdown,
+#clock,
+#custom-weather,
+#network,
+#bluetooth,
+#pulseaudio,
+#cpu,
+#memory,
+#custom-battery,
+#power-profiles-daemon,
+#mpris {
     background: @bg;
-    color: @red;
 
-    border: 1px solid @red-border;
     border-radius: 999px;
 
     margin: 6px 4px;
     padding: 0 14px;
+}
+
+/* =========================================================
+   Shutdown
+   ========================================================= */
+
+#custom-shutdown {
+    color: @red;
+    border: 1px solid @red-border;
     padding-left: 12px;
 }
 
@@ -82,14 +99,8 @@ window#waybar {
    ========================================================= */
 
 #clock {
-    background: @bg;
     color: @text;
-
     border: 1px solid @border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-    padding: 0 14px;
 }
 
 /* =========================================================
@@ -97,14 +108,8 @@ window#waybar {
    ========================================================= */
 
 #custom-weather {
-    background: @bg;
     color: @yellow;
-
     border: 1px solid @yellow-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-    padding: 0 14px;
 }
 
 /* =========================================================
@@ -138,14 +143,8 @@ window#waybar {
    ========================================================= */
 
 #network {
-    background: @bg;
     color: @sky;
-
     border: 1px solid @sky-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-    padding: 0 14px;
 }
 
 /* =========================================================
@@ -153,14 +152,8 @@ window#waybar {
    ========================================================= */
 
 #bluetooth {
-    background: @bg;
     color: @sapphire;
-
     border: 1px solid @sapphire-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-    padding: 0 14px;
     padding-left: 12px;
 }
 
@@ -169,14 +162,8 @@ window#waybar {
    ========================================================= */
 
 #pulseaudio {
-    background: @bg;
     color: @peach;
-
     border: 1px solid @peach-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-    padding: 0 14px;
 }
 
 /* =========================================================
@@ -184,14 +171,8 @@ window#waybar {
    ========================================================= */
 
 #cpu {
-    background: @bg;
     color: @red;
-
     border: 1px solid @red-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-    padding: 0 14px;
 }
 
 /* =========================================================
@@ -199,14 +180,8 @@ window#waybar {
    ========================================================= */
 
 #memory {
-    background: @bg;
     color: @mauve;
-
     border: 1px solid @mauve-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-    padding: 0 14px;
 }
 
 /* =========================================================
@@ -214,14 +189,8 @@ window#waybar {
    ========================================================= */
 
 #custom-battery {
-    background: @bg;
     color: @green;
-
     border: 1px solid @green-border;
-    border-radius: 999px;
-
-    margin: 6px 4px;
-    padding: 0 14px;
 }
 
 /* =========================================================
@@ -229,15 +198,21 @@ window#waybar {
    ========================================================= */
 
 #power-profiles-daemon {
-    background: @bg;
     color: @text;
 
     border: 1px solid @border;
-    border-radius: 999px;
 
-    margin: 6px 4px;
     padding-left: 10px;
     padding-right: 14px;
+}
+
+/* =========================================================
+   Media
+   ========================================================= */
+
+#mpris {
+    color: @blue;
+    border: 1px solid @blue-border;
 }
 
 /* =========================================================
@@ -252,8 +227,10 @@ window#waybar {
 #pulseaudio:hover,
 #cpu:hover,
 #memory:hover,
-#battery:hover,
+#custom-battery:hover,
 #power-profiles-daemon:hover,
+#mpris:hover,
 #workspaces button:hover {
     background: @surface-hover;
 }
+

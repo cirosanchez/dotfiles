@@ -11,7 +11,8 @@
     "modules-left": [
         "custom/shutdown",
         "clock",
-        "custom/weather"
+        "custom/weather",
+        "mpris"
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -43,23 +44,13 @@
     },
     "hyprland/workspaces": {
         "disable-scroll": false,
-        "all-outputs": true,
+        "all-outputs": false,
         "on-click": "activate",
-        "format": "{icon}",
-        "format-icons": {
-            "1": "일",
-            "2": "이",
-            "3": "삼",
-            "4": "사",
-            "5": "오"
-        },
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": []
-        }
+	"active-only": true,
+       	"persistent-workspaces": {
+            "eDP-1": [ 1, 2, 3, 4, 5],
+            "HDMI-A-1": [ 6, 7, 8, 9, 10]
+	}
     },
     "network": {
         "interval": 5,
@@ -131,5 +122,15 @@
             "balanced": "<span color='#ffffff'>󰾅</span>",
             "power-saver": "<span color='#a6e3a1'>󰾆</span>"
         }
-    }
+    },
+    "mpris": {
+    "format": " {dynamic}",
+    "format-playing": "{artist} - {title}",
+    "format-paused": "⏸ {title}",
+    "max-length": 32,
+
+    "on-click": "playerctl play-pause",
+    "on-click-middle": "playerctl previous",
+    "on-click-right": "playerctl next"
+    }   
 }
